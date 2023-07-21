@@ -31,11 +31,17 @@ function App() {
       setTodos(updateTodos)
   }
 
+  const deleteTodo = (todoId) => {
+    const updateTodos = todos.filter((todo) => todo.id !== todoId)
+    setTodos(updateTodos)
+  }
+
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>My Todo List</h1>
       <TodoForm />
-      <Todos todos={todos} toggleCompleted={toggleCompleted}/>
+
+      <Todos todos={todos} toggleCompleted={toggleCompleted} deleteTodo={deleteTodo}/>
     </div>
   )
 }
