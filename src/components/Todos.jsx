@@ -1,4 +1,3 @@
-import React from 'react'
 import TodoItem from './TodoItem'
 
 const Todos = ({todos, toggleCompleted, deleteTodo}) => {
